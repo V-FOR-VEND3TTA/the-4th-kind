@@ -122,6 +122,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "website" / "static",
 ]
 
+# Images we upload in the admin will be stored and fetched here
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
