@@ -9,6 +9,7 @@ urlpatterns = [
     path('services/', views.services, name='services'),
     path('team/', views.team, name='team'),
     path('terms-and-conditions/', views.ts_and_cs, name='terms-and-conditions'),
+    path('privacy-policy.html', views.privacy_policy, name='privacy-policy'),
 ]
 
 handler404 = 'website.views.custom_404'
