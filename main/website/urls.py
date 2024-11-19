@@ -11,5 +11,3 @@ urlpatterns = [
     path('terms-and-conditions/', views.ts_and_cs, name='terms-and-conditions'),
     path('privacy-policy/', views.privacy_policy, name='privacy-policy'),
 ]
-
-handler404 = 'website.views.custom_404'
