@@ -8,6 +8,7 @@ urlpatterns = [
     path('case-studies/', views.case_studies, name='case-studies'),
     path('services/', views.services, name='services'),
     path('team/', views.team, name='team'),
+    path('terms-and-conditions/', views.ts_and_cs, name='terms-and-conditions'),
 ]
 
 handler404 = 'website.views.custom_404'
