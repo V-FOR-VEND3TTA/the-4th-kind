@@ -24,6 +24,9 @@ def team(request):
 def ts_and_cs(request):
     return render(request, 'website/terms-and-conditions.html')
 
+def privacy_policy(request):
+    return render(request, 'website/privacy-policy.html'),
+
 """
 def index_view(request):
     team_members = TeamMember.objects.all()
