@@ -19,7 +19,7 @@ def services(request):
     return render(request, 'website/services.html')
 
 def team(request):
-    return render(request, 'team.html')
+    return render(request, 'website/team.html')
 
 """
 def index_view(request):
