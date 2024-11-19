@@ -18,7 +18,7 @@ def case_studies(request):
 def services(request):
     return render(request, 'website/services.html')
 
-def team_view(request):
+def team(request):
     return render(request, 'team.html')
 
 """
