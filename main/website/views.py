@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponseNotFound
-from .models import TeamMember
+from .models import TeamMember, CaseStudy
 
 def index(request):
     team_members = TeamMember.objects.all()
@@ -13,7 +12,8 @@ def contact(request):
     return render(request, 'website/contact.html')
 
 def case_studies(request):
-    return render(request, 'website/case-studies.html')
+    case_studies = CaseStudy.objects.all()
+    return render(request, 'website/case-studies.html', {'case_studies': case_studies})
 
 def services(request):
     return render(request, 'website/services.html')
