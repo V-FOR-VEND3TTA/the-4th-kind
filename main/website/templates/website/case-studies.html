@@ -53,39 +53,20 @@
                 <h1 class="mb-4">Explore Our Recent AI Case Studies</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="{% static 'img/project-1.jpg' %}" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>Robotic Automation</small>
-                            <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
+                {% for case in case_studies %}
+                    <div class="col-lg-4 wow fadeIn" data-wow-delay="0.{{ forloop.counter0|add:3 }}s">
+                        <div class="case-item position-relative overflow-hidden rounded mb-2">
+                            <img class="img-fluid" src="{{ case.image.url }}" alt="{{ case.title }}">
+                            <a class="case-overlay text-decoration-none" href="{{ case.link }}">
+                                <small>{{ case.subtitle }}</small>
+                                <h5 class="lh-base text-white mb-3">{{ case.description|truncatechars:50 }}</h5>
+                                <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="{% static 'img/project-2.jpg' %}" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>Machine learning</small>
-                            <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="{% static 'img/project-3.jpg' %}" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>Predictive Analysis</small>
-                            <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
+                {% empty %}
+                    <p>No case studies available at the moment.</p>
+                {% endfor %}
             </div>
         </div>
     </div>
