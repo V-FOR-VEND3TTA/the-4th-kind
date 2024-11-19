@@ -1,0 +1,60 @@
+{% extends "website/base.html" %}
+{% load static %}
+<title>{% block title %} Scripted O | Terms and Conditions {% endblock title %}</title>
+
+{% block content %}
+<!-- Hero Start -->
+<div class="container-fluid pt-5 bg-primary hero-header">
+    <div class="container pt-5">
+        <div class="row g-5 pt-5">
+            <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                <h1 class="display-4 text-white mb-4 animated slideInRight">Terms and Conditions</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-white breadcrumb-link">← Back to Home</a>
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Terms and Conditions</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-end">
+                <img class="img-fluid" src="img/hero-img.png" alt="" style="max-height: 300px;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<div class="terms-container m-5">
+    <h1>Terms and Conditions</h1>
+    <p>Welcome to Scripted O! A subdivision of Big O Media focused on Artificial Intelligence research for advertising, marketing, and ecommerce development.</p>
+    <p>These terms and conditions outline the rules and regulations for the use of our website.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to browse through Scripted O if you do not agree to all of the terms and conditions stated on this page.</p>
+
+    <h2>2. Cookies</h2>
+    <p>We employ the use of cookies. By accessing Scripted O, you agreed to use cookies in agreement with our <a href="privacy-policy.html" aria-label="Read our Privacy Policy">Privacy Policy</a>.</p>
+
+    <h2>3. License</h2>
+    <p>Unless otherwise stated, Big O Media and/or its licensors own the intellectual property rights for all material on Scripted O. All intellectual property rights are reserved. You may access this from Scripted O for your personal use, subject to restrictions set in these terms and conditions.</p>
+    <ul>
+        <li>Republish material from Scripted O</li>
+        <li>Sell, rent, or sub-license material from Scripted O</li>
+        <li>Reproduce, duplicate, or copy material from Scripted O</li>
+    </ul>
+
+    <h2>4. Hyperlinking to Our Content</h2>
+    <p>The following organizations may link to our Website without prior written approval:</p>
+    <ul>
+        <li>Government agencies;</li>
+        <li>Search engines;</li>
+        <li>News organizations;</li>
+    </ul>
+
+    <h2>5. Limitation of Liability</h2>
+    <p>In no event shall Scripted O, nor any of its officers, directors, or employees, be held liable for anything arising out of or in any way connected with your use of this Website.</p>
+
+    <p>If you have any questions about these terms and conditions, please <a href="{% url 'contact' %}" aria-label="Contact Scripted O Support">contact us</a>.</p>
+</div>
+{% endblock content %}
