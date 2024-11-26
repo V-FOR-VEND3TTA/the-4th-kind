@@ -473,9 +473,17 @@ h6,
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.terms-container h1, .terms-container h2 {
-    font-family: 'Libre Baskerville', serif;
-    color: #2c3e50;
+.terms-container h1 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.terms-container h2 {
+    font-size: 1.8rem;
+    color: #00509e;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .terms-container p, .terms-container li {
