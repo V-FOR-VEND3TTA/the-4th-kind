@@ -19,7 +19,8 @@ def services(request):
     return render(request, 'website/services.html')
 
 def team(request):
-    return render(request, 'website/team.html')
+    team_members = TeamMember.objects.all()
+    return render(request, 'website/team.html', {'team_members': team_members})
 
 def ts_and_cs(request):
     return render(request, 'website/terms-and-conditions.html')
